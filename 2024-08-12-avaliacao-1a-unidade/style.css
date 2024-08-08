@@ -1,0 +1,230 @@
+html {
+  font-size: 10px;
+  font-family: Helvetica, Verdana, sans-serif;
+
+}
+
+body {
+  margin: 0px;
+}
+
+/******************** HEADER ************************/
+
+header {
+  background-color: #43c14b;
+  color: white;
+  padding-bottom: 15px;
+  font-size: 1.25rem;
+}
+
+#upper-header {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  height: 200px;
+}
+
+#left-section-upper-header {
+  display: flex;
+  
+  
+}
+
+#left-section-upper-header div {
+  border-right: solid white 1px;
+  /*padding: 5px 8px 5px 8px;*/
+  padding: 2px 10px;
+}
+
+#middle-section-upper-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  
+  color: rgb(228, 228, 111);
+}
+
+#middle-section-upper-header img {
+  object-fit: cover;
+  width: 70%;
+}
+
+#right-section-upper-header {
+  display: flex;
+  gap: 10px;
+}
+
+#right-section-upper-header button {
+  background-color: transparent;
+  border: solid white 1px;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 10px;
+}
+
+nav {
+  background-color: #046723;  
+  height: 50px;  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+/******************** MAIN CONTENT ************************/
+
+
+#main-content {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px;
+  gap: 20px;
+  /*****background-color: gray; ****/
+}
+
+/********** IMG **********/
+
+
+#welcome-img img {
+  object-fit: cover;
+  width: 100%;  
+}
+
+
+/********** CTA **********/
+
+#cta-section {
+  background-color: #7aa120;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.5rem;
+  padding: 15px 0px;
+  
+}
+
+
+#cta-main {
+  font-size: 3rem;
+  text-wrap: nowrap;
+  
+}
+
+#cta-support-text {
+  line-height: 150%;
+}
+
+/********** CARDS **********/
+
+#cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 10px;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.card-disciplina,
+.card-pesquisa,
+.card-mentor {
+  flex: 1;
+  min-width: 200px;  
+  padding: 10px 20px;
+}
+
+.card-disciplina {
+  background-color: #e7ecf0;  
+  color: #81858a;
+}
+
+.card-pesquisa {
+  background-color: #106e0e;
+  color: white;
+}
+
+.card-mentor {
+  background-color: #b6ebb9;
+  color: black;
+}
+
+.card-disciplina .card-title,
+.card-mentor .card-title {
+  color: black;  
+}
+
+.card-pesquisa .card-title {
+  color: white;
+}
+
+
+.card-disciplina ul {
+  padding-inline-start: 0px;
+}
+
+
+/********** BUTTONS BAR **********/
+
+#buttons-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;  
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+#buttons-section button {
+  border: solid 1px #43c14b;
+  border-radius: 4px;
+  color: #43c14b;
+  background-color: transparent;
+  flex: 1;
+  padding: 8px;
+}
+
+
+/******************** FOOTER ************************/
+
+footer {
+  display: flex;  
+  flex-direction: column;
+  background-color: #343c35;  
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+#upper-footer {
+  display: flex;  
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.footer-unit {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-unit-title {
+  color: white;
+}
+
+.footer-unit li {
+  color: #81858a;  
+}
+
+
+.footer-unit ul {  
+  padding-inline-start: 0px;
+}
+
+
+#lower-footer {
+  color: white;
+  border-top: solid white 1px;
+  padding: 20px;
+  text-align: center;
+}
