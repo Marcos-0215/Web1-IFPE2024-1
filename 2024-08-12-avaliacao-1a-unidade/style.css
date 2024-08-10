@@ -115,7 +115,7 @@ nav a {
 
 
 
-/******************** MAIN CONTENT ************************/
+/******************** MAIN  CONTENT ************************/
 
 
 main {  
@@ -178,10 +178,11 @@ main {
   box-sizing: border-box;
   width: 32%;
   padding: 0px 30px;
+  min-height: 300px;
 }
 
 .card-disciplina {
-  background-color: #e7ecf0;  
+  background-color: #e7ecf0;
   color: #81858a;
 }
 
@@ -195,7 +196,7 @@ main {
   color: black;
 }
 
-#cards-section h2 {  
+#cards-section h2 {
   font-size: 2rem;
 }
 
