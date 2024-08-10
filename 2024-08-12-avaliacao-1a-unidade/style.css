@@ -14,8 +14,7 @@ body {
 
 header {
   background-color: #43c14b;
-  color: white;
-  /*padding-bottom: 15px;*/
+  color: white;  
   font-size: 1.4rem;
   display: flex;
   flex-direction: column;
@@ -30,6 +29,8 @@ header {
   justify-content:space-around;
   align-items: center;
 }
+
+/********** LEFT SECTION HEADER **********/
 
 #left-section-upper-header {
   display: flex;  
@@ -49,7 +50,7 @@ header {
   color: #9ef49a;
 }
 
-/**************/
+/********** MIDDLE SECTION HEADER **********/
 
 #middle-section-upper-header {
   display: flex;
@@ -69,7 +70,7 @@ header {
   font-weight: 400;
 }
 
-/**************/
+/********** RIGHT SECTION HEADER **********/
 
 #right-section-upper-header {
   display: flex;
@@ -239,39 +240,53 @@ footer {
   display: flex;  
   flex-direction: column;
   background-color: #343c35;  
-  padding: 20px;
+  padding: 40px 40px 0px;
   font-size: 1.5rem;
+}
+
+footer a {
+  color: #81858a;
+  text-decoration: none;
+  width:fit-content;
+}
+
+footer h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+footer a:hover {
+  color: white;
 }
 
 #upper-footer {
   display: flex;  
-  justify-content: space-evenly;
-  gap: 30px;
+  justify-content:space-between;
+  gap: 2%;
+  padding-bottom: 200px;
+  border-bottom: solid white 1px;
 }
 
-.footer-unit {
-  flex: 1;
+.upper-footer-section {
+  box-sizing: border-box;
+  width: 32%;
   display: flex;
   flex-direction: column;
+  justify-content:start;
+  gap: 10px;
 }
 
-.footer-unit-title {
-  color: white;
+.footer-unit {  
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
-
-.footer-unit li {
-  color: #81858a;  
-}
-
-
-.footer-unit ul {  
-  padding-inline-start: 0px;
-}
-
 
 #lower-footer {
+  
   color: white;
-  border-top: solid white 1px;
+  
   padding: 20px;
   text-align: center;
 }
