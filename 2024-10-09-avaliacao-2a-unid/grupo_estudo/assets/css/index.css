@@ -1,0 +1,178 @@
+/************* GENERAL **************/
+
+
+body {
+    margin: 0px;    
+
+    font-family: 'Work Sans', 'Arial', 'Sans Serif';
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 125%;
+    color: #212529;
+}
+
+h1 {
+    font-family: 'Crimson Text', 'Arial', 'Sans Serif';
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 125%;
+}
+
+h2 {
+    font-family: 'Crimson Text', 'Arial', 'Sans Serif';
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 125%;
+}
+
+h3 {
+    font-family: 'Crimson Text', 'Arial', 'Sans Serif';
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 125%;
+}
+
+h4 {
+    font-family: 'Crimson Text', 'Arial', 'Sans Serif';
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 125%;
+}
+
+h5 {
+    font-family: 'Crimson Text', 'Arial', 'Sans Serif';
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 125%;
+}
+
+h6 {
+    font-family: 'Crimson Text', 'Arial', 'Sans Serif';
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 125%;
+}
+
+
+
+
+/************* HEADER **************/
+
+
+header {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #00420C;
+    color: #FFFFFF;
+    padding: 10px 150px;
+}
+
+
+header #institution {
+    display: flex;
+    gap: 30px;
+}
+
+header #institution h1 {
+    white-space: nowrap;
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+
+
+/************* MAIN **************/
+
+
+
+
+/**** BANNER ****/
+
+main #home-banner-section {
+    background-color: #00420C;
+    display: flex;
+    color: white;
+    padding: 10px 150px;
+}
+
+
+
+/**** TECNOLOGIAS ****/
+
+main #tecnologias-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 150px;
+}
+
+
+/**** ESTUDO COLABORATIVO ****/
+
+main #estudo-colaborativo-section {
+    display: flex;
+    padding: 10px 150px;
+}
+
+
+/**** ESTUDAR SOZINHO ****/
+
+main #estudar-sozinho-section {
+    display: flex;
+    padding: 10px 150px;
+}
+
+
+/**** EQUIPE ****/
+
+main #equipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px 150px;
+}
+
+#colaboradores-container {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    
+}
+
+.colaborador-item {
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+    
+}
+
+.colaborador-item img {    
+    height: 200px;;
+}
+
+
+
+/************* FOOTER **************/
+
+
+footer {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #00420C;
+    color: #FFFFFF;
+    padding: 50px 150px;
+}
+
+footer #social-section-footer {
+    display: flex;
+    gap: 30px;
+}
+
