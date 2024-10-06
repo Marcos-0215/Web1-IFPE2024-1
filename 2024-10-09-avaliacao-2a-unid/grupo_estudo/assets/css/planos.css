@@ -107,6 +107,60 @@ header #navigation-links-header li:hover {
 
 /************* MAIN **************/
 
+#presentation-section {
+  grid-area: presentation;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;  
+}
+
+#presentation-section > h4{
+  text-transform: uppercase;
+}
+
+
+#plans-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 150px;
+}
+
+.plan-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  gap: 15px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+}
+
+.price-container > p:first-of-type {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.plan-unit ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /*list-style-type:;*/
+  font-size: 20px;
+  
+}
+
+.plan-unit button {
+  background-color: #212529;
+  color: white;
+  border-radius: 5px;
+  padding: 6px;
+  cursor: pointer;
+}
 
 
 
