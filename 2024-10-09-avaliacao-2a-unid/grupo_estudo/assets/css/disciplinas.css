@@ -107,6 +107,13 @@ header #navigation-links-header li:hover {
 
 /************* MAIN **************/
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 150px;
+}
+
 #presentation-section {
   grid-area: presentation;
   display: flex;
@@ -123,46 +130,33 @@ header #navigation-links-header li:hover {
   text-transform: capitalize;
 }
 
-#plans-section {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px 150px;
+#cards-section {
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+  gap: 50px;
+  width: 100%; 
 }
 
-.plan-unit {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 400px;
-  gap: 15px;
-}
-
-.price-container {
-  display: flex;
-  align-items: center;
-}
-
-.price-container > p:first-of-type {
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.plan-unit ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  /*list-style-type:;*/
-  font-size: 20px;
+@media (max-width: 1440px) {
+  #cards-section {
+    grid-template-columns: 1fr;    
+  }
   
 }
 
-.plan-unit button {
+#cards-section > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+main button {
   background-color: #212529;
   color: white;
   border-radius: 5px;
   padding: 6px;
   cursor: pointer;
+  margin: 30px;
 }
 
 
