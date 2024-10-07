@@ -75,6 +75,10 @@ header {
     padding: 50px 150px;
 }
 
+header a {
+    color: inherit;
+    text-decoration: inherit;
+}
 
 header #institution {
     display: flex;
