@@ -101,7 +101,6 @@ header #navigation-links-header {
 header #navigation-links-header li {
   padding: 12px 8px;
   text-transform: capitalize;
-  /*border: 1px yellow solid;*/
 }
 
 header #navigation-links-header li:hover {
@@ -112,12 +111,15 @@ header #navigation-links-header li:hover {
 
 /************* MAIN **************/
 
-#presentation-section {
-  grid-area: presentation;
+main {
+  padding: 30px 0px;
+}
+
+#presentation-section {  
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 40px;  
+  align-items: center;  
+  text-align: center;
 }
 
 #presentation-section > h4{
@@ -129,17 +131,29 @@ header #navigation-links-header li:hover {
 }
 
 #plans-section {
-  display: flex;
-  justify-content: space-between;
+  /*display: flex;
+  justify-content: space-between;*/
   padding: 50px 150px;
+  display: grid;  
+  grid-template-rows: auto;  
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 40px
 }
 
 .plan-unit {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 400px;
+  align-items: center;  
   gap: 15px;
+  border-radius: 5px;
+  padding: 40px;
+  box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+.plan-unit p {
+  text-align: center;
 }
 
 .price-container {
@@ -150,24 +164,46 @@ header #navigation-links-header li:hover {
 .price-container > p:first-of-type {
   font-size: 30px;
   font-weight: bold;
+  margin-right: 8px;
+}
+
+.plan-unit > p,
+.price-container p:last-of-type {
+  color: gray;
+  
 }
 
 .plan-unit ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  /*list-style-type:;*/
-  font-size: 20px;
-  
+  gap: 20px;
+  list-style-type: none;
+  margin: 30px 0px;
 }
+
+.plan-unit li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.material-symbols-outlined {
+  color: #2f9e41;  
+}
+
+.plan-unit:last-of-type ul {    
+  align-items: flex-start;
+}
+
 
 .plan-unit button {
   background-color: #212529;
   color: white;
   border-radius: 5px;
-  padding: 6px;
+  padding: 10px 15px;
   cursor: pointer;
+  letter-spacing: 0.15em;
 }
 
 
@@ -187,5 +223,59 @@ footer {
 footer #social-section-footer {
   display: flex;
   gap: 30px;
+}
+
+footer #copyright-section-footer p {
+  display: inline;
+}
+
+/************* MEDIA QUERIES **************/
+
+@media (max-width: 375px) {
+
+  header {    
+    padding: 15px;
+  }
+
+  header #navigation-links-header {
+    display: none;    
+  }
+  
+  header .header-title-mobile{
+    display: none;
+  }
+  
+
+  #presentation-section {  
+    padding: 0px 20px; 
+  }
+
+  #plans-section {    
+    padding: 15px;    
+    grid-template-rows: 1fr 1fr 1fr;  
+    grid-template-columns: auto;
+    margin-bottom: 50px;
+  }
+
+  .plan-unit:last-of-type ul {    
+    align-items: inherit;
+  }
+
+  
+  footer {    
+    flex-direction: column;    
+    padding: 15px;
+    text-align: center;
+  }
+
+  footer #social-section-footer {    
+    gap: 10px;
+  }
+
+  footer #copyright-section-footer p {
+    margin-top: 10px;
+    display: block;
+  }
+  
 }
 
