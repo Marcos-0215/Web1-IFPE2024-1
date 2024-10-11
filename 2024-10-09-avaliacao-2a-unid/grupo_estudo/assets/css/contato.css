@@ -101,7 +101,6 @@ header #navigation-links-header {
 header #navigation-links-header li {
   padding: 12px 8px;
   text-transform: capitalize;
-  /*border: 1px yellow solid;*/
 }
 
 header #navigation-links-header li:hover {
