@@ -9,8 +9,7 @@
 
 
 body {
-    margin: 0px;    
-
+    margin: 0px;
     font-family: 'Work Sans', 'Arial', 'Sans Serif';
     font-size: 15px;
     font-weight: normal;
@@ -61,8 +60,6 @@ h6 {
 }
 
 
-
-
 /************* HEADER **************/
 
 
@@ -72,7 +69,7 @@ header {
     align-items: center;
     background-color: #00420C;
     color: #FFFFFF;
-    padding: 50px 150px;
+    padding: 50px 150px;    
 }
 
 header a {
@@ -93,14 +90,12 @@ header #navigation-links-header {
     display: flex;
     gap: 30px;
     list-style-type: none;
-    font-size: 20px;
-    
+    font-size: 20px;    
 }
 
 header #navigation-links-header li {
     padding: 12px 8px;
-    text-transform: capitalize;
-    /*border: 1px yellow solid;*/
+    text-transform: capitalize;    
 }
 
 header #navigation-links-header li:hover {
@@ -113,18 +108,68 @@ header #navigation-links-header li:hover {
 
 /************* MAIN **************/
 
+main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, auto);
+    gap: 50px;
+    padding-bottom: 50px;
+}
 
-
-
-/**** BANNER ****/
-
-main #home-banner-section {
-    background-color: #00420C;
-    display: flex;
-    color: white;
+main > section {
     padding: 10px 150px;
 }
 
+main h4 {
+    text-transform: uppercase;
+} 
+
+main section button:not(:first-child) {
+    background-color: #212529;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 12px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+/**** BANNER ****/
+
+main #home-banner-section {    
+    background-color: #00420C;
+    display: flex;
+    gap: 80px;
+    color: white;
+    padding-bottom: 50px;    
+}
+
+main #banner-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0px;    
+}
+
+main #banner-left button {
+    background-color: white;
+    color: #212529;
+    font-size: 20px;
+    border-radius: 8px;
+    padding: 12px 40px;    
+    margin-top: 10px;
+    width: 160px;
+    transition: width 1s;
+    cursor: pointer;
+}
+
+main #banner-left button:hover {
+    width: 100%;
+}
+
+main #banner-right img {
+    object-fit: cover;
+}
 
 
 /**** TECNOLOGIAS ****/
@@ -133,7 +178,19 @@ main #tecnologias-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 150px;
+    gap: 10px;  
+}
+
+
+main #tecnologias-section h1 {
+    text-transform: capitalize;
+}
+
+main #tech-logos {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 30px 0px;
 }
 
 
@@ -141,15 +198,46 @@ main #tecnologias-section {
 
 main #estudo-colaborativo-section {
     display: flex;
-    padding: 10px 150px;
 }
+
+main #estudo-colaborativo-section > div{
+    flex: 1;
+}
+
+main #estudo-colaborativo-section img {
+    object-fit: cover;
+    width: 100%;
+}
+
+main #estudo-colaborativo-section div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;    
+    gap: 20px;
+}
+
 
 
 /**** ESTUDAR SOZINHO ****/
 
 main #estudar-sozinho-section {
+    display: flex;    
+}
+
+main #estudar-sozinho-section > div{
+    flex: 1;
+}
+
+main #estudar-sozinho-section img {
+    object-fit: cover;
+    width: 100%;
+}
+
+main #estudar-sozinho-section div:first-of-type {
     display: flex;
-    padding: 10px 150px;
+    flex-direction: column;
+    padding-top: 100px;    
+    gap: 20px;    
 }
 
 
@@ -159,26 +247,37 @@ main #equipe {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;    
+}
 
-    padding: 10px 150px;
+main #equipe > p {
+    text-align: center;
+    font-size: 19px;
 }
 
 #colaboradores-container {
     display: flex;
     gap: 30px;
     justify-content: space-between;
-    
+    margin: 30px 0px;  
 }
 
 .colaborador-item {
     border-radius: 10px;
     padding: 40px;
-    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
-    
+    box-shadow: 5px 10px 10px 2px rgba(0, 0, 0, 0.3);    
 }
 
 .colaborador-item img {    
     height: 200px;;
+}
+
+.colaborador-item p {
+    text-transform: uppercase;
+}
+
+#equipe button {
+    padding: 15px 40px;
 }
 
 
@@ -198,5 +297,9 @@ footer {
 footer #social-section-footer {
     display: flex;
     gap: 30px;
+}
+
+footer #copyright-section-footer p {
+    display: inline;
 }
 
