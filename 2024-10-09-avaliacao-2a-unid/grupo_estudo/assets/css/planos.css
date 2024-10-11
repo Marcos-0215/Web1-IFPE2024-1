@@ -192,6 +192,7 @@ main {
   color: #2f9e41;  
 }
 
+/*Prof. Henrique, conforme layout no arquivo páginas.pdf */
 .plan-unit:last-of-type ul {    
   align-items: flex-start;
 }
