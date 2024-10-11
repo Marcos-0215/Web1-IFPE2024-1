@@ -100,7 +100,6 @@ header #navigation-links-header {
 header #navigation-links-header li {
   padding: 12px 8px;
   text-transform: capitalize;
-  /*border: 1px yellow solid;*/
 }
 
 header #navigation-links-header li:hover {
@@ -112,18 +111,19 @@ header #navigation-links-header li:hover {
 /************* MAIN **************/
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 150px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);  
+  padding: 30px 150px;  
 }
 
-#presentation-section {
-  grid-area: presentation;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;  
+#presentation-section {  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+  text-align: center;
+  margin: 30px 0px;
 }
 
 #presentation-section > h4{
@@ -136,21 +136,15 @@ main {
 
 #cards-section {
   display: grid;
-  grid-template-columns:  1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 50px;
-  width: 100%; 
+  margin-top: 50px;
 }
 
-@media (max-width: 1440px) {
-  #cards-section {
-    grid-template-columns: 1fr;    
-  }
-  
-}
-
-#cards-section > img {
-  width: 100%;
+#cards-section img {
   object-fit: cover;
+  width: 100%;
 }
 
 
@@ -158,9 +152,12 @@ main button {
   background-color: #212529;
   color: white;
   border-radius: 5px;
-  padding: 6px;
-  cursor: pointer;
-  margin: 30px;
+  font-size: 18px;
+  padding: 10px;
+  width: fit-content;
+  justify-self: center;
+  cursor: pointer;  
+  margin: 50px 0px;
 }
 
 
@@ -180,5 +177,74 @@ footer {
 footer #social-section-footer {
   display: flex;
   gap: 30px;
+}
+
+footer #copyright-section-footer p {
+  display: inline;
+}
+
+
+/************* MEDIA QUERIES **************/
+
+@media (max-width: 375px) {
+
+  header {    
+    padding: 15px;
+  }
+
+  header #navigation-links-header {
+    display: none;    
+  }
+  
+  header .header-title-mobile{
+    display: none;
+  }
+  
+
+  #presentation-section {  
+    padding: 0px 20px; 
+  }
+
+  main {
+    padding: 15px;    
+  }
+
+  #presentation-section {  
+    margin: 15px 0px;
+  }
+
+  #cards-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    margin-top: 10px;
+  }
+
+  main button {
+    margin: 30px;
+  }
+
+  
+  footer {    
+    flex-direction: column;    
+    padding: 15px;
+    text-align: center;
+  }
+
+  footer #social-section-footer {    
+    gap: 10px;
+  }
+
+  footer #copyright-section-footer p {
+    margin-top: 10px;
+    display: block;
+  }
+  
+  /*Prof. Henrique, conforme layout no arquivo páginas.pdf */
+  footer #copyright-section-footer p:last-of-type {
+    text-align: right;
+  }
+  
+
 }
 
