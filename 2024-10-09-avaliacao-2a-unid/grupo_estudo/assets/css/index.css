@@ -111,7 +111,9 @@ header #navigation-links-header li:hover {
     cursor: pointer;
 }
 
-
+#hamburger-menu {
+    display: none;
+}
 
 /************* MAIN **************/
 
@@ -344,6 +346,11 @@ footer #copyright-section-footer p {
         display: none;
     }
 
+    #hamburger-menu {
+        display: block;        
+        font-size: 30px;
+        cursor: pointer;
+    }
 
     main > section {
         padding: 15px;

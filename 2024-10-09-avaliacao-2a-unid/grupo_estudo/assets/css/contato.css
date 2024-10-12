@@ -8,6 +8,12 @@
 
 /************* GENERAL **************/
 
+:root {
+  --btn-bckgd-color: #212529;
+  --hover-nav-color: #2f9e41;
+  --primary-bckgd-color: #00420C;
+  --primary-text-color: #FFFFFF;
+}
 
 body {
   margin: 0px;    
@@ -16,7 +22,7 @@ body {
   font-size: 15px;
   font-weight: normal;
   line-height: 125%;
-  color: #212529;
+  color: var(--btn-bckgd-color);
 }
 
 h1 {
@@ -71,8 +77,8 @@ header {
   display: flex;
   justify-content:space-between;
   align-items: center;
-  background-color: #00420C;
-  color: #FFFFFF;
+  background-color: var(--primary-bckgd-color);
+  color: var(--primary-text-color);
   padding: 50px 150px;
 }
 
@@ -104,7 +110,7 @@ header #navigation-links-header li {
 }
 
 header #navigation-links-header li:hover {
-  background-color: #2f9e41;
+  background-color: var(--hover-nav-color);
   border-radius: 5px;
   cursor: pointer;
 }
@@ -155,7 +161,7 @@ form input:not(:last-of-type) {
 }
 
 form input:last-of-type {
-  background-color: #212529;
+  background-color: var(--btn-bckgd-color);
   color: white;
   border-radius: 5px;
   padding: 8px;
@@ -183,8 +189,8 @@ footer {
   display: flex;
   justify-content:space-between;
   align-items: center;
-  background-color: #00420C;
-  color: #FFFFFF;
+  background-color: var(--primary-bckgd-color);
+  color: var(--primary-text-color);
   padding: 50px 150px;
 }
 
