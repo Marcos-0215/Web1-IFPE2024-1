@@ -7,6 +7,13 @@
 
 /************* GENERAL **************/
 
+:root {
+    --btn-bckgd-color: #212529;
+    --hover-nav-color: #2f9e41;
+    --primary-bckgd-color: #00420C;
+    --primary-text-color: #FFFFFF;
+}
+
 
 body {
     margin: 0px;
@@ -67,8 +74,8 @@ header {
     display: flex;
     justify-content:space-between;
     align-items: center;
-    background-color: #00420C;
-    color: #FFFFFF;
+    background-color: var(--primary-bckgd-color);
+    color: var(--primary-text-color);
     padding: 50px 150px;    
 }
 
@@ -99,7 +106,7 @@ header #navigation-links-header li {
 }
 
 header #navigation-links-header li:hover {
-    background-color: #2f9e41;
+    background-color: var(--hover-nav-color);
     border-radius: 5px;
     cursor: pointer;
 }
@@ -125,7 +132,7 @@ main h4 {
 } 
 
 main section button:not(:first-child) {
-    background-color: #212529;
+    background-color: var(--btn-bckgd-color);
     color: white;
     font-size: 18px;
     border-radius: 5px;
@@ -137,7 +144,7 @@ main section button:not(:first-child) {
 /**** BANNER ****/
 
 main #home-banner-section {    
-    background-color: #00420C;
+    background-color: var(--primary-bckgd-color);
     display: flex;
     gap: 80px;
     color: white;
@@ -153,7 +160,7 @@ main #banner-left {
 
 main #banner-left button {
     background-color: white;
-    color: #212529;
+    color: var(--btn-bckgd-color);
     font-size: 20px;
     border-radius: 8px;
     padding: 12px 40px;    
@@ -168,27 +175,29 @@ main #banner-left button:hover {
 }
 
 main #banner-right img {
-    object-fit: cover;
+  object-fit: cover;  
 }
 
 
 /**** TECNOLOGIAS ****/
 
 main #tecnologias-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;  
 }
 
 
 main #tecnologias-section h1 {
     text-transform: capitalize;
+    text-align: center;
 }
 
 main #tech-logos {
     display: flex;
     width: 100%;
+    gap: 30px;
     justify-content: space-between;
     padding: 30px 0px;
 }
@@ -214,6 +223,11 @@ main #estudo-colaborativo-section div:last-of-type {
     flex-direction: column;
     padding-top: 40px;    
     gap: 20px;
+}
+
+main #estudo-colaborativo-section p,
+main #estudar-sozinho-section p {
+    color: gray;
 }
 
 
@@ -257,23 +271,33 @@ main #equipe > p {
 
 #colaboradores-container {
     display: flex;
-    gap: 30px;
+    gap: 50px;
     justify-content: space-between;
     margin: 30px 0px;  
 }
 
 .colaborador-item {
+    display: flex;
+    flex-direction: column;    
     border-radius: 10px;
     padding: 40px;
-    box-shadow: 5px 10px 10px 2px rgba(0, 0, 0, 0.3);    
+    box-shadow: 5px 10px 10px 2px rgba(0, 0, 0, 0.3); 
 }
 
 .colaborador-item img {    
-    height: 200px;;
+    height: 150px;
+}
+
+.colaborador-item h3 {
+    white-space: nowrap;
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 .colaborador-item p {
     text-transform: uppercase;
+    color: gray;
+    margin: 15px 0px;
 }
 
 #equipe button {
@@ -289,8 +313,8 @@ footer {
     display: flex;
     justify-content:space-between;
     align-items: center;
-    background-color: #00420C;
-    color: #FFFFFF;
+    background-color: var(--primary-bckgd-color);
+    color: var(--primary-text-color);
     padding: 50px 150px;
 }
 
@@ -303,3 +327,73 @@ footer #copyright-section-footer p {
     display: inline;
 }
 
+
+/************* MEDIA QUERIES **************/
+
+@media (max-width: 375px) {
+
+    header {    
+        padding: 15px;
+    }
+
+    header #navigation-links-header {
+        display: none;
+    }
+
+    header .header-title-mobile{
+        display: none;
+    }
+
+
+    main > section {
+        padding: 15px;
+    }
+
+    main #home-banner-section,
+    main #tech-logos,
+    main #estudo-colaborativo-section,
+    main #estudar-sozinho-section {
+        flex-direction: column;
+    }
+
+    main #home-banner-section {        
+        gap: 30px;    
+        padding-bottom: 20px;    
+    }
+
+    main #banner-left,
+    main #estudar-sozinho-section div:first-of-type {
+        order: 1;    
+    }
+
+    main #banner-right img {        
+        width: 100%;
+
+    }
+
+    main #tech-logos {
+        width: 50%;
+    }
+
+    #colaboradores-container {
+        flex-direction: column;
+        width: 80%;        
+    }
+    
+
+    footer {    
+        flex-direction: column;    
+        padding: 15px;
+        text-align: center;
+    }
+
+    footer #social-section-footer {    
+        gap: 10px;
+    }
+
+    footer #copyright-section-footer p {
+        margin-top: 10px;
+        display: block;
+    }
+  
+}
